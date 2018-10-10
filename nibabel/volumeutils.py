@@ -499,7 +499,7 @@ def array_from_file(shape, in_dtype, infile, offset=0, order='F', mmap=True):
         raise ValueError("mmap value should be one of True, False, 'c', "
                          "'r', 'r+'")
     if mmap is True:
-        mmap = 'c'
+        mmap = 'w'
     in_dtype = np.dtype(in_dtype)
     # Get file-like object from Opener instance
     infile = getattr(infile, 'fobj', infile)
